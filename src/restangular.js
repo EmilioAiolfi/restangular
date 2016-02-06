@@ -1348,3 +1348,15 @@ restangular.provider('Restangular', function() {
 });
 
 })();
+
+/**
+ * Syntax with Browserify.
+ * You can inject the module in AngularJS using commonjs require
+**/
+
+/* jshint ignore:start */
+if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === exports){
+  var _ = require('lodash');
+  module.exports = 'restangular';
+}
+/* jshint ignore:end */
